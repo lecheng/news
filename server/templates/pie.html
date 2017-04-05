@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>boxplot</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <script src='/static/js/lib.js'></script>
+    <script src="/static/js/pvisual.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <style>
+    .chart, svg{
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Pie"></div>
+        <div id="Radar"></div>
+    </div>
+    <script>
+        {% autoescape None %}
+        var pie = pvisual.model.pie();
+        var radar = pvisual.model.radar();
+        data1 = {{pie_data}};
+        data2 = {{radar_data}};
+        pie.data(data1).render('div#Pie');
+        radar.data(data2).render('div#Radar');
+    </script>
+</body>
+</html>

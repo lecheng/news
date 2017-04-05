@@ -1,0 +1,6 @@
+pymongo==3.4.0
+pyquery==1.2.17
+chardet==2.3.0
+tornado==4.4.2
+jieba==0.38
+numpy==1.12.0

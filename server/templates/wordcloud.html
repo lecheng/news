@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>wordcloud</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <script src='/static/js/lib.js'></script>
+    <script src="/static/js/pvisual.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <style>
+    .chart, svg{
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Chart"></div>
+    </div>
+    <script>
+    {% autoescape None %}
+    var wordcloud = pvisual.model.wordcloud();
+    d = {{data}}
+    wordcloud.data(d).render('div#Chart');
+    </script>
+</body>
+</html>

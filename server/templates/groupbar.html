@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>groupbar</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <script src='/static/js/lib.js'></script>
+    <script src="/static/js/pvisual.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <style>
+    .chart, svg{
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Chart"></div>
+    </div>
+    <script>
+    {% autoescape None %}
+        var groupbar = pvisual.model.groupbar();
+        d = {{data}}
+        groupbar.csv('/static/data/groupbar.json', function(d) {
+        groupbar.data(d).render('div#Chart');
+        });
+    </script>
+</body>
+</html>
