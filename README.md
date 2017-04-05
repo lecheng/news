@@ -11,3 +11,6 @@ This is a system to analyze the latent influence of hot financial topics extract
 ./server tornado web server.</br>
 ./spider web crawlers to fetch financial news data.</br>
 ./util	some utils used in the project.</br>
+
+# dependencies
+<div class="well">pip install -r requirements.t
