@@ -13,4 +13,6 @@ This is a system to analyze the latent influence of hot financial topics extract
 ./util	some utils used in the project.</br>
 
 # dependencies
-<div class="well">pip install -r requirements.t
+```javascript
+pip install -r requirements.txt
+```
